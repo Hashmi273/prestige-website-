@@ -1,9 +1,14 @@
+# GitHub Actions Deployment Workflow for Prestige Group Website
+# Repository: Hashmi273/prestige-website
+# Base URL: /prestige-website/
+
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
