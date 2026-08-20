@@ -2,17 +2,18 @@ import React from 'react';
 
 /**
  * Logo Component for Prestige Group
- * Renders the uploaded official brand logo image.
+ * Renders the uploaded official brand logo image using Vite BASE_URL.
  */
 export default function Logo({ variant = 'dark', className = '' }) {
   const isLight = variant === 'light';
+  const logoPath = `${import.meta.env.BASE_URL}logo.jpg`;
 
   return (
     <div className={`flex items-center gap-3 group cursor-pointer ${className}`}>
       {/* Brand Logo Image */}
       <div className={`relative p-1 rounded bg-white border ${isLight ? 'border-slate-700 shadow-md' : 'border-slate-200 shadow-sm'} group-hover:border-signature-gold transition-colors duration-300`}>
         <img 
-          src="/logo.jpg" 
+          src={logoPath} 
           alt="Prestige Group Logo" 
           className="h-10 sm:h-12 w-auto object-contain"
         />
